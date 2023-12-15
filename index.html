@@ -1,1 +1,79 @@
-"hello world"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>matt web</title>
+    <link href="style.css?v=2" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <div>
+                <a href="index.html" class="logo">
+                </a>
+            </div>
+            <div class="about">
+                <a href="#">
+                    <img src="img/About.svg" alt="about">
+                </a>
+            </div>
+        </div>
+        <div class="main" id="set-height">
+            <video id="v0" tabindex="0" autobuffer="autobuffer" preload="preload" src="video/video-example01.mp4"></video>
+            <div class="intro">
+                <video id="v1" tabindex="0" autobuffer="autobuffer" preload="preload" src="video/video-example-02.mp4"></video>
+                <div class="skip">
+                    <a href="step1.html">
+                        <img src="img/skip.svg" alt="skip">
+                    </a>
+                </div>
+            </div>
+            <div class="lastshot">
+                <img src="/img/LastShot.svg" alt="Last Shot">
+            </div>
+        </div>
+        <div class="footer">
+            
+        </div>
+    </div>
+    <script>
+        var frameNumber = 0, // start video at frame 0
+    // lower numbers = faster playback
+    playbackConst = 500, 
+    // get page height from video duration
+    setHeight = document.getElementById("set-height"), 
+    // select video element         
+    vid = document.getElementById('v0'); 
+
+// dynamically set the page height according to video length
+vid.addEventListener('loadedmetadata', function() {
+  setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
+});
+
+// Use requestAnimationFrame for smooth playback
+function scrollPlay(){  
+  var frameNumber  = window.pageYOffset/playbackConst;
+  vid.currentTime  = frameNumber;
+  window.requestAnimationFrame(scrollPlay);
+  
+}
+
+window.requestAnimationFrame(scrollPlay);
+
+$(window).scroll(function() {
+   if($(window).scrollTop() + $(window).height() == $(document).height()) {
+    $(".intro").css({display:"block"});
+    $("#v1").get(0).play();
+    $(".main").css({height:"100%"});
+    $(".lastshot").css({display:"none"});
+   }
+   else{
+    $("#v0").css({position:"fixed", top: "0px"});
+   }
+});
+    </script>
+</body>
+
+</html>

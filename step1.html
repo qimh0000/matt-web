@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>matt web</title>
+    <link href="style.css?v=2" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <div>
+                <a href="../index.html" class="logo">
+                </a>
+            </div>
+            <div class="about">
+                <a href="#">
+                    <img src="../img/About.svg" alt="about">
+                </a>
+            </div>
+        </div>
+        <div class="main">
+            <div class="guide-video">
+                <video id="v2" controls preload="preload" src="video/video-example01.mp4"></video>
+                <div class="cross">
+                    <button onclick="closeVideo()" class="button"><img src="img/cross.svg" alt="cross"></button>
+                    
+                </div>
+            </div>
+            <div class="control">
+                <div class="guide">
+                    <button onclick="showVideo()" class="button"><img src="/img/Guide.svg" alt="guide"></button>
+                </div>
+                <div class="next">
+                    <a href="step2.html"><img src="img/next.svg" alt="next"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            
+        </div>
+    </div>
+    <script>
+        function showVideo(){
+            $(".guide-video").css({display:"block"});
+            $(".control").css({display:"none"});
+            $("#v2").get(0).play();
+        }
+        function closeVideo(){
+            $(".guide-video").css({display:"none"});
+            $(".control").css({display:"block"});
+            $("#v2").get(0).pause();
+        }
+    </script>
+</body>
+</html>
