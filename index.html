@@ -23,7 +23,7 @@
         <div class="main" id="set-height">
             <video id="v0" tabindex="0" autobuffer="autobuffer" preload="preload" src="video/video-example01.mp4"></video>
             <div class="intro">
-                <video id="v1" tabindex="0" autobuffer="autobuffer" preload="preload" src="video/video-example-02.mp4"></video>
+                <video controls id="v1" tabindex="0" autobuffer="autobuffer" preload="preload" src="video/video-example-02.mp4"></video>
                 <div class="skip">
                     <a href="step1.html">
                         <img src="img/skip.svg" alt="skip">
@@ -68,6 +68,7 @@ $(window).scroll(function() {
     $("#v1").get(0).play();
     $(".main").css({height:"100%"});
     $(".lastshot").css({display:"none"});
+    $(".header").css({display:"none"});
    }
    else{
     $("#v0").css({position:"fixed", top: "0px"});
