@@ -46,11 +46,13 @@
             $(".guide-video").css({display:"block"});
             $(".control").css({display:"none"});
             $("#v2").get(0).play();
+            $(".header").css({display:"none"});
         }
         function closeVideo(){
             $(".guide-video").css({display:"none"});
             $(".control").css({display:"block"});
             $("#v2").get(0).pause();
+            $(".header").css({display:"flex"});
         }
     </script>
 </body>
