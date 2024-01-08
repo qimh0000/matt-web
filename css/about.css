@@ -1,0 +1,30 @@
+
+
+.main {
+  background-image: url("../img/about-bg.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}/*# sourceMappingURL=about.css.map */
+
+.motivation {
+  position: absolute;
+  top: 10vh;
+  left: 5vw;
+}
+.motivation img{
+  width: 60%;
+}
+
+.content{
+  width: 25%;
+}
+
+p {
+  font-size: 0.8rem;
+  margin: 3vh 0;
+  color: blue;
+  line-height: 1.45rem;
+  font-family: 'Montserrat', sans-serif;
+}
