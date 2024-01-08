@@ -98,15 +98,19 @@ table {
 }
 
 .about {
-  display: flex;
-  justify-content: center;
-  margin-right: 7%;
+  display: block;
+  width: 60px;
+  height: 13px;
+  background-image: url("img/About.svg");
+  background-repeat: no-repeat;
+  margin:1%;
+  margin-right: 3%;
 }
 
-.about a {
-  display: flex;
-  justify-content: center;
+.about:hover{
+  background-image: url("img/About-hover.svg");
 }
+
 
 .control{
   position: fixed;
