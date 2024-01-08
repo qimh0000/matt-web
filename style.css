@@ -69,7 +69,7 @@ table {
 .main-container {
   width: 100%;
   height: 100%;
-  background-color: #E7DFD0;
+  background-color: #ffffff;
 }
 
 .header {
@@ -80,9 +80,9 @@ table {
   align-content: center;
   justify-content: space-between;
   padding: 0.5rem;
-  background-color: #E7DFD0;
-  border: 0.15rem #031BF4 solid;
-  z-index: 100;
+  /*background-color: #ffffff;*/
+  /*border: 0.15rem #031BF4 solid;*/
+  z-index: 500;
 }
 
 .logo {
@@ -108,10 +108,16 @@ table {
   justify-content: center;
 }
 
+.control{
+  position: fixed;
+  z-index: 500;
+}
+
 .lastshot {
   position: fixed;
   bottom: 5vh;
   left: 5vw;
+  z-index: 500;
 }
 
 .main {
@@ -128,6 +134,7 @@ table {
   height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: 150;
 }
 
 .intro {
@@ -148,6 +155,7 @@ table {
   position: fixed;
   bottom: 5vh;
   right: 7vw;
+  z-index: 500;
 }
 
 .button {
@@ -168,7 +176,7 @@ table {
 
 .cross {
   position: fixed;
-  z-index: 100;
+  z-index: 200;
   right: 1vw;
   top: 1vh;
 }
@@ -181,3 +189,11 @@ table {
   bottom: 3vh;
   right: 7vw;
 }/*# sourceMappingURL=style.css.map */
+
+.p5Canvas{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
