@@ -113,13 +113,6 @@ table {
   z-index: 500;
 }
 
-.lastshot {
-  position: fixed;
-  bottom: 5vh;
-  left: 5vw;
-  z-index: 500;
-}
-
 .main {
   position: relative;
   width: 100%;

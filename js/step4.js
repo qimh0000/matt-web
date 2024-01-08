@@ -14,7 +14,7 @@ function setup() {
   imgY = windowHeight / 2;
 
   button = createButton('Off'); // create a button with initial label 'Off'
-  button.position(19, 19); // position the button
+  button.position(19, 70); // position the button
   button.mousePressed(toggleImage);
 }
 
