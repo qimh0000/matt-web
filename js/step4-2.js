@@ -229,11 +229,11 @@ function printMadlib() {
   redraw(); }
 
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-  voronoiGraphics.resizeCanvas(windowWidth, windowHeight);
-  imageGraphics.resizeCanvas(windowWidth, windowHeight);
-}
+// function windowResized() {
+//   resizeCanvas(windowWidth, windowHeight);
+//   voronoiGraphics.resizeCanvas(windowWidth, windowHeight);
+//   imageGraphics.resizeCanvas(windowWidth, windowHeight);
+// }
 
 
 
