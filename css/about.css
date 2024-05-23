@@ -1,7 +1,7 @@
 
 
 .main {
-  background-image: url("../img/about-bg.png");
+  background-image: url("../img/about-bg-2.png");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -11,7 +11,7 @@
 .motivation {
   position: absolute;
   top: 10vh;
-  left: 5vw;
+  margin: 0 5vw;
 }
 .motivation img{
   width: 60%;
@@ -22,9 +22,21 @@
 }
 
 p {
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin: 3vh 0;
   color: blue;
   line-height: 1.45rem;
   font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width: 1300px) {
+  .content{
+    width: 50%;
+  }
+}
+
+@media (max-width: 720px){
+  .content{
+    width: 100%;
+  }
 }
