@@ -21,8 +21,8 @@ let lastDragX, lastDragY;
 
 
 function preload() {
-  img = loadImage('img/img5.png');
-	 img1 = loadImage('img/img6.png');// 加载你的图像
+  img = loadImage('./img/img5.png');
+	 img1 = loadImage('./img/img6.png');// 加载你的图像
 }
 
 function setup() {
