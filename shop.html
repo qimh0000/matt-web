@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>matt web</title>
+    <link href="style.css?v=2" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="js/step2-2.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="main-container step2">
+        <div class="header">
+            <div>
+                <a href="index.html" class="logo">
+                    <img class="active" style="width: 150px;margin-top:-2rem;margin-left: -1.2rem;"
+                        src="img/home-2.gif">
+                    <img class="static" style="width: 72px;margin: 1rem 1.5rem;" src="img/home-2.png">
+                </a>
+            </div>
+            <div class="header-links">
+                <a href="about.html" class="about montserrat-font">
+                    ABOUT
+                </a>
+                <!-- <a href="shop.html" class="about montserrat-font">
+                    SHOP
+                </a> -->
+            </div>
+        </div>
+        <div class="main">
+            <!-- <div class="guide-video">
+                <video id="v2" controls preload="preload" src="video/video_2.mp4"></video>
+                <div class="cross">
+                    <button onclick="closeVideo()" class="button"><img src="img/cross.svg" alt="cross"></button>
+
+                </div>
+            </div> -->
+            <div class="control">
+                <!-- <div class="guide">
+                    <button onclick="showVideo()" class="button"><img src="img/Guide.svg" alt="guide"></button>
+                </div> -->
+                <div class="next">
+                    <a href="step3.html"><img src="img/next.svg" alt="next"></a>
+                </div>
+            </div>
+            <div id="canvas2" class="p5Canvas"></div>
+        </div>
+    </div>
+    <div class="step2-text montserrat-font"
+        style="z-index: 1000; position: absolute; width: 100%;top: 50vh;display: flex;justify-content: center;flex-direction: column;">
+        <p style="text-align: center;">Waiting creates stories...</p>
+        <p style="text-align: center;font-size: 25px;">Draw your emotions</p>
+    </div>
+    <script>
+        function showVideo() {
+            $(".guide-video").css({ display: "block" });
+            $(".control").css({ display: "none" });
+            $("#v2").get(0).play();
+            $(".header").css({ display: "none" });
+        }
+        function closeVideo() {
+            $(".guide-video").css({ display: "none" });
+            $(".control").css({ display: "block" });
+            $("#v2").get(0).pause();
+            $(".header").css({ display: "flex" });
+        }
+    </script>
+</body>
+
+</html>

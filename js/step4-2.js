@@ -33,13 +33,13 @@ function setup() {
   imageGraphics = createGraphics(windowWidth, windowHeight);
   
   button = createButton('Off');
-  button.position(25, 130);
+  button.position(25, 160);
 	button.size(45, 30);
 	button.style('border-radius','6px')
   button.mousePressed(toggleImage);
 	
 	  button2 = createButton('Off');
-  button2.position(25, 90);
+  button2.position(25, 120);
 	button2.size(45, 30);
 	button2.style('border-radius','6px')
   button2.mousePressed(toggleImage1);
@@ -61,34 +61,34 @@ function setup() {
 	//button1.mousePressed(printMadlib)
 	//noLoop();
 	let saveButton = createButton('Save');
-  saveButton.position(25, 170); // Place it below the toggle button
+  saveButton.position(25, 200); // Place it below the toggle button
   saveButton.size(45, 30);
   saveButton.style('border-radius', '6px');
   saveButton.mousePressed(() => saveCanvas('Motivation', 'png'));
 	
 	 let moveLeftButton = createButton('<');
-  moveLeftButton.position(5, 250);
+  moveLeftButton.position(5, 280);
   moveLeftButton.mousePressed(() => {
     imgX -= 10; 
     redraw();
   });
 
   let moveRightButton = createButton('>');
-  moveRightButton.position(63, 250);
+  moveRightButton.position(63, 280);
   moveRightButton.mousePressed(() => {
     imgX += 10;
     redraw();
   });
 
   let moveUpButton = createButton('^');
-  moveUpButton.position(35, 220);
+  moveUpButton.position(35, 250);
   moveUpButton.mousePressed(() => {
     imgY -= 10;
     redraw();
   });
 
   let moveDownButton = createButton('v');
-  moveDownButton.position(35, 280);
+  moveDownButton.position(35, 310);
   moveDownButton.mousePressed(() => {
     imgY += 10;
     redraw();
