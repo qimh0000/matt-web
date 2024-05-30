@@ -216,6 +216,10 @@ color: #0D00A0;
   right: 7vw;
 }/*# sourceMappingURL=style.css.map */
 
+.next a img{
+  width: 100%;
+}
+
 .p5Canvas{
   position: fixed;
   left: 0;
@@ -271,6 +275,9 @@ color: #0D00A0;
   }
   .step3 .desktop{
     display: none;
+  }
+  .next{
+    width: 30%;
   }
 }
 
