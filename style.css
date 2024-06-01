@@ -1,16 +1,84 @@
-resethtml, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+resethtml,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -20,8 +88,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -34,7 +111,7 @@ body {
   line-height: 1;
   width: 100%;
   height: 100%;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 /*
@@ -48,16 +125,20 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }*/
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -76,7 +157,7 @@ table {
 .header {
   display: flex;
   position: fixed;
-  width: 99vw;
+  width: -webkit-fill-available;
   flex-direction: row;
   align-content: center;
   justify-content: space-between;
@@ -120,28 +201,29 @@ table {
   text-decoration: none;
 }
 
-.header-links{
+.header-links {
   display: flex;
   flex-direction: row;
   gap: 4rem;
 }
 
 .header-links a {
-font-size: 2rem;
-display: flex;
-align-items: center;
-height: fit-content;
-margin-top: 1rem;
-right: 0;
-color: #0D00A0;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  margin-top: 1rem;
+  right: 0;
+  color: #0D00A0;
 }
-.header-links a:hover{
+
+.header-links a:hover {
   transform: scale(1.01);
   transition: 0.15s;
 }
 
 
-.control{
+.control {
   position: fixed;
   z-index: 500;
 }
@@ -159,7 +241,7 @@ color: #0D00A0;
   width: 100%;
   height: 100vh;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   z-index: 150;
 }
 
@@ -174,7 +256,7 @@ color: #0D00A0;
   width: 100%;
   height: 100vh;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .skip {
@@ -206,6 +288,7 @@ color: #0D00A0;
   right: 1vw;
   top: 1vh;
 }
+
 .cross img {
   width: 5rem;
 }
@@ -214,78 +297,183 @@ color: #0D00A0;
   position: fixed;
   bottom: 3vh;
   right: 7vw;
-}/*# sourceMappingURL=style.css.map */
+}
 
-.next a img{
+/*# sourceMappingURL=style.css.map */
+
+.next a img {
   width: 100%;
 }
 
-.p5Canvas{
+.p5Canvas {
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100vh;
 }
+
 .static {
-  position:absolute;
+  position: absolute;
   left: 0;
 }
-.active{
-  opacity:0;
+
+.active {
+  opacity: 0;
+  width: 160px;
+  margin-top: -2.3rem;
+  margin-left: -1rem;
 }
-.active:hover{
-  opacity:100;
+
+.active:hover {
+  opacity: 100;
 }
-.active:hover ~ .static{
+
+.active:hover~.static {
   display: none;
 }
 
-.step2{
+.step2 {
   background-image: url(img/desktop-step2-bg.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
 
-.step3 .mobile{
+.step3 .mobile {
   display: none;
 }
 
+.shop {
+  background-image: url(img/shop-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #ffffff;
+  background-position: center;
+  position: absolute;
+  bottom: 0;
+  margin: 2rem;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 
-@media (max-width: 900px){
-  .desktop{
+.shop-title {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.shop-title a {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.shop-title a img {
+  height: 52px;
+}
+.shop-title a img:hover {
+  transform: scale(1.05);
+}
+
+.shop-title p {
+  color: #720101;
+  font-size: 64px;
+  font-weight: 700;
+
+}
+
+.shop .content {
+  width: 30vw;
+  line-height: 24px;
+}
+
+.shop .content p {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 900px) {
+  .desktop {
     display: none;
   }
-  .header{
+
+  .header {
     width: 90vw;
   }
+
   .header-links a {
     font-size: 1rem;
   }
-  .header-links{
+
+  .header-links {
     gap: 1rem;
     margin-top: 1rem;
   }
-  .step2{
+
+  .step2 {
     background-image: url(img/step2-bg.png);
   }
-  .step3 .mobile{
+
+  .step3 .mobile {
     display: block;
   }
-  .step3 .desktop{
+
+  .step3 .desktop {
     display: none;
   }
-  .next{
+
+  .next {
     width: 30%;
   }
 }
 
 
-@media (max-width: 720px){
-  .content{
+@media (max-width: 720px) {
+  .content {
     width: 100%;
   }
+
+  .shop {
+    background-image: url(img/mobile-shop-bg.png);
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .shop .content {
+    justify-content: flex-end;
+    width: 100%;
+
+  }
+
+  .shop .content p {
+    font-size: 2vw;
+    margin: 0;
+    line-height: 5vw;
+  }
+
+  .shop-title {
+    width: 100%;
+  }
+
+  .shop-title a img {
+    height: 10vw;
+  }
+
+  .shop-title p {
+    font-size: 10vw;
+    margin: 0;
+  }
+
+  .shop-container {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
   /* .logo {
     width: 119px;
     height: 20.06px;
